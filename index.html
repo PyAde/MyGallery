@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shorcut icon" type="x-icon" href="assets/img/icon.jpeg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>My Gallery</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="https://pin.it/1nKWyyx"><img src="assets/img/icon.jpeg" alt=" " class="img-circle" width="50px"></a>
+                    <!-- <a href=""><img src="assets/img/WhatsApp-Image-2022-09-06-at-20.49.24.ico" alt=""></a> -->
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Akhir Navbar -->
+    <!-- Home-->
+    <div class="home">
+        <section id="home">
+            <div class="judul">
+                <h1>Welcome To My Gallery</h1>
+            </div>
+        </section>
+    </div>
+    <!-- Akhir Home -->
+    <!-- Gambar -->
+    <section id="gallery">
+        <div class="container">
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+            <div class="image">
+                <img src="assets/img/image1.png" alt="">
+                <div class="deskripsi">Text Align</div>
+            </div>
+        </div>
+        <div class="popup">
+            <span>&times;</span>
+            <img src="assets/img/image1.png" alt="">
+        </div>
+    </section>
+    <!-- Akhir Gambar -->
+    <script>
+        document.querySelectorAll(".container img").forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
